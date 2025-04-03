@@ -1,0 +1,105 @@
+{
+  "name": "bbs-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite serve",
+    "build": "vue-tsc -b && pnpm lint && pnpm lint:style && vite build",
+    "build:test": "pnpm build --mode test",
+    "build:production": "pnpm build --mode production",
+    "preview": "vite preview",
+    "lint": "eslint src --fix",
+    "lint:style": "stylelint src/**/*.{vue,css,scss} --fix",
+    "prepare": "husky",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@vueuse/core": "^13.0.0",
+    "ant-design-vue": "^4.2.6",
+    "axios": "^1.8.4",
+    "codemirror": "^6.0.1",
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.13",
+    "lodash-es": "^4.17.21",
+    "modern-normalize": "^3.0.1",
+    "nprogress": "^0.2.0",
+    "pinia": "^3.0.1",
+    "pinia-plugin-persistedstate": "^4.2.0",
+    "qs": "^6.14.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "vxe-table": "^4.12.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@iconify/json": "^2.2.323",
+    "@tailwindcss/vite": "^4.1.1",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vitejs/plugin-vue-jsx": "^4.1.2",
+    "commander": "^13.1.0",
+    "eslint": "^9.23.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-vue": "^10.0.0",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "path-browserify-esm": "^1.0.6",
+    "postcss": "^8.5.3",
+    "postcss-preset-env": "^10.1.5",
+    "postcss-pxtorem": "^6.1.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "sass": "^1.86.2",
+    "stylelint": "^16.17.0",
+    "stylelint-config-recess-order": "^6.0.0",
+    "stylelint-config-recommended-vue": "^1.6.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "tailwindcss": "^4.1.1",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0",
+    "unplugin-auto-import": "^19.1.2",
+    "unplugin-icons": "^22.1.0",
+    "unplugin-vue-components": "^28.4.1",
+    "vite": "^6.2.4",
+    "vite-plugin-checker": "^0.9.1",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-virtual-mpa": "^1.12.1",
+    "vite-plugin-vue-devtools": "^7.7.2",
+    "vite-svg-loader": "^5.1.0",
+    "vue-eslint-parser": "^10.1.1",
+    "vue-tsc": "3.0.0-alpha.2"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.3.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --cache --ignore-unknown  --write",
+      "eslint --cache --cache-location node_modules/.cache/.eslintcache --fix"
+    ],
+    "*.{scss,html,vue,css}": [
+      "prettier --cache --ignore-unknown --write",
+      "stylelint --fix --allow-empty-input"
+    ],
+    "*.vue": [
+      "prettier --cache --write",
+      "eslint --cache --cache-location node_modules/.cache/.eslintcache --fix",
+      "stylelint --fix --allow-empty-input"
+    ],
+    "*.md": [
+      "prettier --cache --ignore-unknown --write"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --cache --write--parser json"
+    ]
+  },
+  "volta": {
+    "node": "22.14.0"
+  }
+}

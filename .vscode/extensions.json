@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode",
+    "mikestead.dotenv",
+    "antfu.iconify",
+    "Lokalise.i18n-ally",
+    "vunguyentuan.vscode-css-variables",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
